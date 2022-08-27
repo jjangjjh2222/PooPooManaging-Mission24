@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .forms import PostForm
-from .models import Post
+from recordApp.forms import PostForm
+from recordApp.models import Post
 
 def home(request):
     posts = Post.objects.filter().order_by('-date')
@@ -19,3 +19,9 @@ def postcreate(request):
     else: # request method가 GET일 경우
         form = PostForm()# form 입력 html 띄우기
     return render(request, 'post_form.html', {'form':form})
+
+def get_time(request):
+
+    print('테스트 입니다.')
+    print(request.method)
+    return render(request, 'post_form.html')
