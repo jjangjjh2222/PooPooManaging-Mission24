@@ -1,42 +1,92 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--<link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css" />-->
-    <title>Document</title>
-  </head>
-  <body>
-    <div style="text-align: center">
-      <p>힘주기 시작!</p>
-      <h1>
-        <span id="hour">00</span>:<span id="min">00</span>:<span id="sec"
-          >00</span
-        >
-      </h1>
-      <button class="w-btn w-btn-green" id="start">start</button>
-      <!-- <form id="fakeForm" method="post" action="{% url 'get_time' %}"> -->
-      <!-- {%csrf_token%} -->
-      <button class="w-btn w-btn-indigo" id="stop">stop</button>
-      <!-- </form> -->
-      <button class="w-btn w-btn-indigo" id="clear">clear</button>
-    </div>
-    <div>
-      {% for post in posts %}
-      <div>
-        <a href="{% url 'detail' post.id %}">
-          <span>{{ post.date }}</span>
-          <p>{{ post.hour }}시간 {{ post.minute }}분 {{ post.sec}}초</p>
-          <span>&rarr;결과보러가기</span>
-        </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="text-align: center">
+    <section>
+      <h1 class="title"> POOPOO TIME </h1>
+      <div class="balloon">
+        <p>쾌변하러 가보자고~!</p>
       </div>
-      <br />
-      <br />
-      {% endfor %}
+      <div>
+        <img class="main_pic" src="{% static 'img/main2.png' %}" />
+      </div>
+    </section>
+    <h1>
+      <span id="hour">00</span>:<span id="min">00</span>:<span id="sec">00</span>
+    </h1>
+    <button onclick="testClick()" class="w-btn w-btn-green" id="start">푸푸타임시작</button>
+   
+    
+    <!-- <form id="fakeForm" method="post" action="{% url 'get_time' %}"> -->
+    <!-- {%csrf_token%} -->
+    <button class="w-btn w-btn-indigo" id="stop">저장하기</button>
+    <!-- </form> -->
+    <button class="w-btn w-btn-indigo" id="clear">초기화하기</button>
+  </div>
+  <div id='record'>💩나의 푸푸 기록💩</div>
+  <div>
+    {% for post in posts %}
+    <div class="date1">
+      <a href="{% url 'detail' post.id %}">
+        <div class='box'>
+          <div class='left'>
+            <p>{{ post.date }}</p>
+            <p>{{ post.hour }}시간 {{ post.minute }}분 {{ post.sec}}초</p>
+          </div>
+          <div class='right'>
+            <img id="icon" src="{% static 'img/sp1.png'%}">
+          </div>
+        </div>
+      </div>
+
+      </a>
     </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="{% static 'js/timer.js' %}"></script>
-  </body>
+    {% endfor %}
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="{% static 'js/timer.js' %}"></script>
+</body>
+<script>
+        
+  const testClick = () => {
+      document.getElementById("start").innerHTML = "푸푸타임종료"
+      // document.getElementById("small-box").innerHTML="기분좋은 푸푸타임"
+  }
+
+</script>
 </html>
+
+<!--<html>
+
+<head>
+    <title>Basic Box Model</title>
+    <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="box1">
+        
+
+        <section>
+            <h4>푸푸기록</h4>
+            
+            {% for post in posts %}
+              
+              </tr>
+            {% endfor %}
+        </section>
+
+</body>
+
+</html>
+-->
