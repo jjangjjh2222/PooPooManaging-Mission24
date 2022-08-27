@@ -35,8 +35,12 @@ window.onload = function () {
     var min = parseInt(document.getElementById("min").innerText);
     var hour = parseInt(document.getElementById("hour").innerText);
 
+    console.log(sec);
+    console.log(min);
+    console.log(hour);
+
     //start seconds
-    //timer_micro = setInterval(function () {
+    //timer_micro = setInterval(function () {å
     //  micro++;
     //  if (micro == 100) {
     //    micro = "00";
@@ -98,15 +102,22 @@ window.onload = function () {
     clearInterval(timer_min);
     clearInterval(timer_hour);
 
+    const stopHour = hour.innerText;
+    const stopMin = min.innerText;
+    const stopSec = sec.innerText;
+
     timer--;
     if (timer < 0) timer = 0;
     let context = new Object();
+
     $.ajax({
       method: "GET",
       url: "get_time",
       data: {
         message: "submit",
-        time_data: sec,
+        hour: stopHour,
+        min: stopMin,
+        sec: stopSec,
       },
       dataType: "json",
     });
