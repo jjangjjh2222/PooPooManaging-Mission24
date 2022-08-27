@@ -100,6 +100,16 @@ window.onload = function () {
 
     timer--;
     if (timer < 0) timer = 0;
+    let context = new Object();
+    $.ajax({
+      method: "GET",
+      url: "get_time",
+      data: {
+        message: "submit",
+        time_data: sec,
+      },
+      dataType: "json",
+    });
   }
 
   //click clear button
