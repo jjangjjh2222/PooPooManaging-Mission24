@@ -23,7 +23,20 @@
       <!-- </form> -->
       <button class="w-btn w-btn-indigo" id="clear">clear</button>
     </div>
+    <div>
+      <ul>
+      {% for post in posts %}
+        <div>
+          <li>{{ post.date }}</li>
+          <p>{{ post.hour }}시간 {{ post.minute }}분 {{ post.sec}}초</p>
+          <div>
+        </tr>
+      {% endfor %}
+      </ul>
+    </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="{% static 'js/timer.js' %}"></script>
   </body>
 </html>
+
+
