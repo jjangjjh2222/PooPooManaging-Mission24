@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from recordApp.models import Post
 
 
@@ -20,4 +20,9 @@ def get_time(request):
     new_post.sec = sec_data
     new_post.save()
     return redirect('home')
+
+def detail(request, time_id):
+    post_detail = get_object_or_404(Post, pk=time_id)
+    return render(request, 'detail.html',{'post':post_detail})
+
 
