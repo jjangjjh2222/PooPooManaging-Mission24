@@ -13,7 +13,8 @@
       <p>힘주기 시작!</p>
       <h1>
         <span id="hour">00</span>:<span id="min">00</span>:<span id="sec"
-          >00</span>
+          >00</span
+        >
       </h1>
       <button class="w-btn w-btn-green" id="start">start</button>
       <!-- <form id="fakeForm" method="post" action="{% url 'get_time' %}"> -->
@@ -23,21 +24,19 @@
       <button class="w-btn w-btn-indigo" id="clear">clear</button>
     </div>
     <div>
-      
       {% for post in posts %}
-        <div>
-          <a href="{% url 'detail' post.id %}">
+      <div>
+        <a href="{% url 'detail' post.id %}">
           <span>{{ post.date }}</span>
           <p>{{ post.hour }}시간 {{ post.minute }}분 {{ post.sec}}초</p>
-          </a>
           <span>&rarr;결과보러가기</span>
-        </div>
-        <br> <br>
+        </a>
+      </div>
+      <br />
+      <br />
       {% endfor %}
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="{% static 'js/timer.js' %}"></script>
   </body>
 </html>
-
-
