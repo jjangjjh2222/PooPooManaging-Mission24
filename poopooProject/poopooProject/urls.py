@@ -23,4 +23,5 @@ urlpatterns = [
     path('',views.home, name='home'),
     path('index.html',views.home, name='index'),
     path('get_time', record_views.get_time, name='get_time'),
-    ]
+    path('detail/<int:time_id>', record_views.detail, name='detail')
+]
