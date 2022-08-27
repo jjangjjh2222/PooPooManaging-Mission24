@@ -1,3 +1,92 @@
-#fakeForm {
-  visibility: hidden;
+* {
+  margin: 0;
+}
+
+body {
+  max-width: 375px;
+  max-height: 1185px;
+  text-align: center;
+}
+
+.box1 {
+  margin-Top: 147px;
+
+}
+
+.title {
+  font-size: 27px;
+}
+
+h2 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+}
+
+button {
+  margin-top: 59px;
+  font-size: 27px;
+  padding: 10px 50px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.balloon {
+  position: relative;
+  margin: 50px auto;
+  width: 290px;
+  line-height: 50px;
+  background: #D2D2D2;
+  border-radius: 10px;
+  size: 27px
+}
+
+.balloon:after {
+  border-top: 10px solid #D2D2D2;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0px solid transparent;
+  content: "";
+  position: absolute;
+  top: 48px;
+  left: 30px;
+}
+
+.box2 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 311px;
+  height: 63px;
+  left: 32px;
+  top: 755px;
+  border: 2px solid #000000;
+  border-radius: 14px;
+}
+
+.time {
+  font-size: 50px
+}
+
+h4 {
+  margin-top: 20px;
+
+}
+
+.date1 .date2 {
+  border-radius: 14px;
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 10px;
+  text-align: left;
+}
+.date1{
+  background-color: aqua;
+  border-radius: 14px;
+}
+.date2{
+  background-color: aquamarine;
+  border-radius: 14px;
 }

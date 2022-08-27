@@ -1,42 +1,40 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--<link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css" />-->
-    <title>Document</title>
-  </head>
-  <body>
-    <a href="{% url 'index' %}">타이머 체크하러 ㄱ</a>
-    <div style="text-align: center">
-      <p>힘주기 시작!</p>
-      <h1>
-        <span id="hour">00</span>:<span id="min">00</span>:<span id="sec"
-          >00</span>
-      </h1>
-      <button class="w-btn w-btn-green" id="start">start</button>
-      <!-- <form id="fakeForm" method="post" action="{% url 'get_time' %}"> -->
-      <!-- {%csrf_token%} -->
-      <button class="w-btn w-btn-indigo" id="stop">stop</button>
-      <!-- </form> -->
-      <button class="w-btn w-btn-indigo" id="clear">clear</button>
-    </div>
-    <div>
-      <ul>
-      {% for post in posts %}
-        <div>
-          <li>{{ post.date }}</li>
-          <p>{{ post.hour }}시간 {{ post.minute }}분 {{ post.sec}}초</p>
-          <div>
-        </tr>
-      {% endfor %}
-      </ul>
-    </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="{% static 'js/timer.js' %}"></script>
-  </body>
+
+
+<html>
+
+<head>
+    <title>Basic Box Model</title>
+    <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="box1">
+        <section>
+            <h1 class="title"> POOPOO TIME </h1>
+            <div class="balloon">
+                <p>쾌변하러 가보자고~!</p>
+            </div>
+            <div>
+                <img src="image/poop main.png" />
+                <h2>00:00:00</h2>
+                <button>푸푸타임 시작</button>
+            </div>
+        </section>
+
+        <section>
+            <h4>푸푸기록</h4>
+            
+            {% for post in posts %}
+              <div class = "date1">
+                <p>{{ post.date }}</p>
+                <p>{{ post.hour }}시간 {{ post.minute }}분 {{ post.sec}}초</p>
+              <div>
+              </tr>
+            {% endfor %}
+        </section>
+
+</body>
+
 </html>
-
-
