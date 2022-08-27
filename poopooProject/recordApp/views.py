@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
-from recordApp.forms import PostForm
+#from recordApp.forms import PostForm
 from recordApp.models import Post
-from .models import Post
 
 def record(request):
     posts = Post.objects.filter().order_by('-date')
@@ -23,6 +22,9 @@ def postcreate(request):
 
 def get_time(request):
 
-    print('테스트 입니다.')
-    print(request.method)
-    return render(request, 'post_form.html')
+    hour_data = request.GET.get('hour')
+    min_data = request.GET.get('min')
+    sec_data = request.GET.get('sec')
+    
+    print(hour_data, min_data, sec_data)
+

@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from poopooApp import views
-from recordApp import views
+from recordApp import views as record_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home, name='home'),
     path('index.html',views.home, name='index'),
-    path('postcreate', views.postcreate, name='postcreate'),
-    path('get_time', views.get_time, name='get_time'),
+    path('postcreate', record_views.postcreate, name='postcreate'),
+    path('get_time', record_views.get_time, name='get_time'),
     ]
