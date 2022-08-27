@@ -22,6 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home, name='home'),
     path('index.html',views.home, name='index'),
-    path('postcreate', record_views.postcreate, name='postcreate'),
     path('get_time', record_views.get_time, name='get_time'),
     ]

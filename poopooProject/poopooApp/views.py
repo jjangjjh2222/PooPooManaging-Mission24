@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from recordApp.models import Post
 
 # Create your views here.
 def home(req):
-    return render(req, "home.html")
+    posts = Post.objects.filter().order_by('-date')
+    return render(req, 'home.html', {'posts':posts})
 
