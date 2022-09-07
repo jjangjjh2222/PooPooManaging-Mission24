@@ -12,7 +12,6 @@
 
 <br>
 
-- 멋쟁이사자처럼 대학 10기 경기남부 해커톤 팀
 - 참조 : https://playmylife.notion.site/MISSION-24-709b92e2e14748a7a21fce9cc2bf905a
 
 <br>
@@ -24,6 +23,16 @@
 | 기획 및 디자인 | 심하윤 |
 | 백엔드 개발자 | 정재현 |
 | 백/프론트엔드 개발자 | 김하영 |
+
+<br>
+<br>
+
+- 멋쟁이사자처럼 대학 10기 경기남부 해커톤 우수상 수상
+
+<img src = "https://user-images.githubusercontent.com/88773219/188952953-16bb9a8b-7144-4e07-996a-a97da0672094.png" width="40%" height="50%"></img>
+
+
+
 
 
 <br>
